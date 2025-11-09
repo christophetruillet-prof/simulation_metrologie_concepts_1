@@ -83,7 +83,7 @@ function drawHistogram(canvas, hist, showGauss) {
   ctx.clearRect(0,0,width,height);
   const m = {l:40,r:10,t:10,b:30};
   const w = width - m.l - m.r, h = height - m.t - m.b;
-  const mu = 30.0, sigma = 1.0;
+  const mu = 30.0, sigma = 0.5;
 
   // max théorique : pic de la gaussienne * N * largeur de bin
   const maxGauss = normalPdf(mu, mu, sigma) * hist.N * hist.binW;
@@ -173,3 +173,4 @@ document.getElementById('copyBtn').addEventListener('click', async ()=>{
 </script>
 </body>
 </html>
+
